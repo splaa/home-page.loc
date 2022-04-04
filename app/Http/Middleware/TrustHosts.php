@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class TrustHosts extends Middleware
 {
-    protected string $proxies = '**';
+    protected string $proxies = '*';
     protected int $headers = Request::HEADER_X_FORWARDED_AWS_ELB;
     /**
      * @return array<int, string|null>
