@@ -21,7 +21,7 @@ jobs:
       - name: Create cache folders
         run: mkdir -p storage/framework/cache
       - name: Create sessions folders
-        run: mkdir -pstorage/framework/sessions
+        run: mkdir -p storage/framework/sessions
       - name: Install composer dependencies
         run: composer install
       - name: Set required directory permissions
