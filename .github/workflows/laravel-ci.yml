@@ -18,12 +18,8 @@ jobs:
           extensions: mbstring, bcmath
       - name: Copy .env.example to .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - name: Configclear
-        run: php artisan config:clear
-      - name: Cache clear
-        run: php artisan cache:clear
       - name: Create cache folders
-        run: mkdir -p storage/framework/cache
+        run: mkdir -p storage/framework/cache/data
       - name: Create sessions folders
         run: mkdir -p storage/framework/sessions
       - name: Install composer dependencies
