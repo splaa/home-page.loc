@@ -9,3 +9,4 @@
 
 ## About Test Project
 
+[![Laravel CI](https://github.com/splaa/home-page.loc/actions/workflows/laravel-ci.yml/badge.svg)](https://github.com/splaa/home-page.loc/actions/workflows/laravel-ci.yml)
