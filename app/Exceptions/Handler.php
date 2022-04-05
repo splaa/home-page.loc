@@ -7,9 +7,8 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+
     /**
-     * A list of the exception types that are not reported.
-     *
      * @var array<int, class-string<Throwable>>
      */
     protected $dontReport = [
@@ -17,8 +16,6 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * A list of the inputs that are never flashed for validation exceptions.
-     *
      * @var array<int, string>
      */
     protected $dontFlash = [
@@ -28,14 +25,32 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * Register the exception handling callbacks for the application.
-     *
      * @return void
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
+        $this->reportable(function(Throwable $e) {
             //
         });
+    }
+
+    public function report(Throwable $exception)
+    {
+        parent::report($exception);
+    }
+
+    public function shouldReport(Throwable $exception)
+    {
+        return parent::shouldReport($exception);
+    }
+
+    public function render($request, Throwable $exception)
+    {
+        return parent::render($request, $exception);
+    }
+
+    public function renderForConsole($output, Throwable $exception)
+    {
+        parent::renderForConsole($output, $exception);
     }
 }
