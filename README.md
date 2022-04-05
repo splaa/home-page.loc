@@ -7,6 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Test Project
+## About Home Test Project
 
 [![Laravel CI](https://github.com/splaa/home-page.loc/actions/workflows/laravel-ci.yml/badge.svg)](https://github.com/splaa/home-page.loc/actions/workflows/laravel-ci.yml)
