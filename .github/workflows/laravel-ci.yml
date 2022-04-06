@@ -101,7 +101,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USER }}
           script: |
-            cd ${{ secret.PATH }}
+            cd ${{ secrets.PATH }}
             php artisan down
             git checkout -f
             git pull origin master
