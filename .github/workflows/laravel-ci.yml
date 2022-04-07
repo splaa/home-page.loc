@@ -81,13 +81,13 @@ jobs:
       - name: Migrations
         run: |
           sudo cp .env.github .env
-      - name: Test with phpunit
-        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text --coverage-clover clover.xml
-        env:
-          DB_PORT: ${{ job.services.mysql.ports['3306'] }}
+  #      - name: Test with phpunit
+  #        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text --coverage-clover clover.xml
+  #        env:
+  #          DB_PORT: ${{ job.services.mysql.ports['3306'] }}
 
-      - name: Do we pass the coverage amount
-        run: vendor/bin/coverage-check clover.xml 60
+  #      - name: Do we pass the coverage amount
+  #        run: vendor/bin/coverage-check clover.xml 60
   deploy:
     runs-on: ubuntu-latest
 
