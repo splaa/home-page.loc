@@ -101,7 +101,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USER }}
           script: |
-            cd ${{ secrets.PATH }}
+            cd /var/www/splx-test.ml
             php artisan down
             git checkout -f
             git pull origin master
