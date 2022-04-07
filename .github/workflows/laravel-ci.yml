@@ -101,11 +101,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USER }}
           script: |
-            cd /var/www/splx-test.ml
+            cd ${{ secrets.PATH }}
             php artisan down
             git checkout -f
             git pull origin master
-            php -r "file_exists('.env') || copy('.env.example', '.env');"
+            php -r "file_exists('.env') || copy('.env.prod', '.env');"
             composer install --optimize-autoloader --no-dev
             php artisan key:generate
             chmod -R 777 storage bootstrap/cache
