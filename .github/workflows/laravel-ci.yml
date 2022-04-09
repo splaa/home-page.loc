@@ -106,7 +106,9 @@ jobs:
             git checkout -f
             git pull origin master
             php -r "file_exists('.env') || copy('.env.prod', '.env');"
-            composer install --optimize-autoloader --no-dev
+#                    todo: splx-
+#            composer install --optimize-autoloader --no-dev solve the problem of Class "Facade\Ignition\IgnitionServiceProvider" not found
+            composer install --optimize-autoloader
             php artisan key:generate
             chmod -R 777 storage bootstrap/cache
             php artisan migrate
